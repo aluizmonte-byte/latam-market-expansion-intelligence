@@ -1,0 +1,111 @@
+country_code,country,year,indicator,indicator_code,value
+ARG,Argentina,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.458822968080686
+ARG,Argentina,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.82409522925391
+ARG,Argentina,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.81190879856952
+ARG,Argentina,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.3984601182853
+ARG,Argentina,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.36838083162438
+ARG,Argentina,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.26616924308721
+ARG,Argentina,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.48500687570697
+ARG,Argentina,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.23253157689253
+ARG,Argentina,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.78936504083806
+ARG,Argentina,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.584748941173009
+ARG,Argentina,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.97713461784426
+BRA,Brazil,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.40696865505948
+BRA,Brazil,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.38960808548439
+BRA,Brazil,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.86383344298207
+BRA,Brazil,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.8680317970139
+BRA,Brazil,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.77979084938159
+BRA,Brazil,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.59263795310275
+BRA,Brazil,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.692673213156
+BRA,Brazil,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.07858821454947
+BRA,Brazil,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.33825981739039
+BRA,Brazil,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.13737803865892
+BRA,Brazil,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.59214931791344
+CHL,Chile,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.06114644888118
+CHL,Chile,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.97989457086765
+CHL,Chile,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,5.72340675956374
+CHL,Chile,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,6.2344860828365
+CHL,Chile,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.81031437211446
+CHL,Chile,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.50500989019161
+CHL,Chile,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.87915172452024
+CHL,Chile,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.68461345207245
+CHL,Chile,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.89647029836548
+CHL,Chile,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.55707488153847
+CHL,Chile,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,7.32780348711267
+COL,Colombia,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.52970921188005
+COL,Colombia,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.25416050189283
+COL,Colombia,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.57716748279263
+COL,Colombia,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.97124137726565
+COL,Colombia,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.00175693787234
+COL,Colombia,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.7588942895314
+COL,Colombia,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.33058240931506
+COL,Colombia,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.38083573220188
+COL,Colombia,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.3931823276543
+COL,Colombia,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.90164572903473
+COL,Colombia,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.95939854860993
+CRI,Costa Rica,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,5.42895237748853
+CRI,Costa Rica,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,5.58692738273204
+CRI,Costa Rica,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,6.05567371313475
+CRI,Costa Rica,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,7.34017474268191
+CRI,Costa Rica,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,5.47775634815964
+CRI,Costa Rica,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.34838047556023
+CRI,Costa Rica,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.19904890207774
+CRI,Costa Rica,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.81804579792257
+CRI,Costa Rica,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.83327522044665
+CRI,Costa Rica,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.45296211937019
+CRI,Costa Rica,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,5.23639457041545
+ECU,Ecuador,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.99695043238739
+ECU,Ecuador,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.360313100049938
+ECU,Ecuador,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.398026146047552
+ECU,Ecuador,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.759637557255968
+ECU,Ecuador,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.607504922954352
+ECU,Ecuador,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.16754746598289
+ECU,Ecuador,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.915058228783613
+ECU,Ecuador,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.29341012436864
+ECU,Ecuador,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.605279629548276
+ECU,Ecuador,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.78469706502846
+ECU,Ecuador,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.36067004574537
+MEX,Mexico,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.35098180233848
+MEX,Mexico,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.48429388161511
+MEX,Mexico,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.7099038174861
+MEX,Mexico,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.67267286267437
+MEX,Mexico,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.70530313479407
+MEX,Mexico,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.81400875229273
+MEX,Mexico,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.29651449559824
+MEX,Mexico,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.0141785043816
+MEX,Mexico,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.78307493364523
+MEX,Mexico,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.49768027047347
+MEX,Mexico,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.98783786611186
+PAN,Panama,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.03740687229861
+PAN,Panama,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.41063281860388
+PAN,Panama,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.26384312723174
+PAN,Panama,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.09254919376261
+PAN,Panama,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.71982266279312
+PAN,Panama,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,-2.85980025219661
+PAN,Panama,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,6.71350419888271
+PAN,Panama,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,6.39404563819442
+PAN,Panama,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,6.34573158944271
+PAN,Panama,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,8.78226077131318
+PAN,Panama,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,9.17966898468326
+PER,Peru,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.09176833503603
+PER,Peru,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.29780708272736
+PER,Peru,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.64334960973353
+PER,Peru,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.6280339832618
+PER,Peru,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.15463147592016
+PER,Peru,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,0.464940476173709
+PER,Peru,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.25881990677455
+PER,Peru,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.78225210860643
+PER,Peru,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.65967264603654
+PER,Peru,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.66247550178788
+PER,Peru,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,3.90315707606412
+URY,Uruguay,2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.31014232152148
+URY,Uruguay,2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,-4.78198682520397
+URY,Uruguay,2023,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,-6.62564746176161
+URY,Uruguay,2022,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,12.367138051104
+URY,Uruguay,2021,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,8.50404500730576
+URY,Uruguay,2020,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,1.81750761000671
+URY,Uruguay,2019,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.35703298196688
+URY,Uruguay,2018,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,2.64222389301977
+URY,Uruguay,2017,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.13270730118374
+URY,Uruguay,2016,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,-0.897082488190792
+URY,Uruguay,2015,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,4.6342339444993

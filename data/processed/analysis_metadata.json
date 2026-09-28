@@ -1,0 +1,37 @@
+{
+  "reference_year": 2024,
+  "data_retrieved_on": "2026-09-21",
+  "countries": {
+    "ARG": "Argentina",
+    "BRA": "Brazil",
+    "CHL": "Chile",
+    "COL": "Colombia",
+    "CRI": "Costa Rica",
+    "ECU": "Ecuador",
+    "MEX": "Mexico",
+    "PAN": "Panama",
+    "PER": "Peru",
+    "URY": "Uruguay"
+  },
+  "indicators": {
+    "gdp_usd": "NY.GDP.MKTP.CD",
+    "gdp_growth_pct": "NY.GDP.MKTP.KD.ZG",
+    "gdp_per_capita_usd": "NY.GDP.PCAP.CD",
+    "population": "SP.POP.TOTL",
+    "internet_users_pct": "IT.NET.USER.ZS",
+    "trade_pct_gdp": "NE.TRD.GNFS.ZS",
+    "fdi_net_inflows_pct_gdp": "BX.KLT.DINV.WD.GD.ZS",
+    "inflation_pct": "FP.CPI.TOTL.ZG"
+  },
+  "weights": {
+    "gdp_usd": 0.2,
+    "gdp_growth_pct": 0.15,
+    "gdp_per_capita_usd": 0.1,
+    "population": 0.1,
+    "internet_users_pct": 0.15,
+    "trade_pct_gdp": 0.15,
+    "fdi_net_inflows_pct_gdp": 0.1,
+    "inflation_pct": 0.05
+  },
+  "method": "5th/95th percentile winsorization, min-max normalization, weighted sum"
+}

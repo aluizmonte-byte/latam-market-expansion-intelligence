@@ -1,0 +1,111 @@
+country_code,country,year,indicator,indicator_code,value
+ARG,Argentina,2025,internet_users_pct,IT.NET.USER.ZS,
+ARG,Argentina,2024,internet_users_pct,IT.NET.USER.ZS,89.66715228
+ARG,Argentina,2023,internet_users_pct,IT.NET.USER.ZS,89.22897166
+ARG,Argentina,2022,internet_users_pct,IT.NET.USER.ZS,88.37535691
+ARG,Argentina,2021,internet_users_pct,IT.NET.USER.ZS,87.15070683
+ARG,Argentina,2020,internet_users_pct,IT.NET.USER.ZS,85.51438646
+ARG,Argentina,2019,internet_users_pct,IT.NET.USER.ZS,79.9469520347551
+ARG,Argentina,2018,internet_users_pct,IT.NET.USER.ZS,77.7
+ARG,Argentina,2017,internet_users_pct,IT.NET.USER.ZS,74.2949068657957
+ARG,Argentina,2016,internet_users_pct,IT.NET.USER.ZS,70.9689808206024
+ARG,Argentina,2015,internet_users_pct,IT.NET.USER.ZS,68.0430641088122
+BRA,Brazil,2025,internet_users_pct,IT.NET.USER.ZS,
+BRA,Brazil,2024,internet_users_pct,IT.NET.USER.ZS,84.46347227
+BRA,Brazil,2023,internet_users_pct,IT.NET.USER.ZS,84.15060238
+BRA,Brazil,2022,internet_users_pct,IT.NET.USER.ZS,80.52775094
+BRA,Brazil,2021,internet_users_pct,IT.NET.USER.ZS,80.68989314
+BRA,Brazil,2020,internet_users_pct,IT.NET.USER.ZS,81.34269353
+BRA,Brazil,2019,internet_users_pct,IT.NET.USER.ZS,73.9124399133589
+BRA,Brazil,2018,internet_users_pct,IT.NET.USER.ZS,70.4342825404361
+BRA,Brazil,2017,internet_users_pct,IT.NET.USER.ZS,67.4712845236305
+BRA,Brazil,2016,internet_users_pct,IT.NET.USER.ZS,60.8725400681261
+BRA,Brazil,2015,internet_users_pct,IT.NET.USER.ZS,58.3279517340924
+CHL,Chile,2025,internet_users_pct,IT.NET.USER.ZS,
+CHL,Chile,2024,internet_users_pct,IT.NET.USER.ZS,95.590243
+CHL,Chile,2023,internet_users_pct,IT.NET.USER.ZS,94.45742345
+CHL,Chile,2022,internet_users_pct,IT.NET.USER.ZS,92.31819916
+CHL,Chile,2021,internet_users_pct,IT.NET.USER.ZS,90.23280334
+CHL,Chile,2020,internet_users_pct,IT.NET.USER.ZS,87.45929718
+CHL,Chile,2019,internet_users_pct,IT.NET.USER.ZS,85.01760101
+CHL,Chile,2018,internet_users_pct,IT.NET.USER.ZS,84.90000153
+CHL,Chile,2017,internet_users_pct,IT.NET.USER.ZS,82.3274869338464
+CHL,Chile,2016,internet_users_pct,IT.NET.USER.ZS,83.5585860244169
+CHL,Chile,2015,internet_users_pct,IT.NET.USER.ZS,76.6295919508796
+COL,Colombia,2025,internet_users_pct,IT.NET.USER.ZS,
+COL,Colombia,2024,internet_users_pct,IT.NET.USER.ZS,79.34543299
+COL,Colombia,2023,internet_users_pct,IT.NET.USER.ZS,77.33686322
+COL,Colombia,2022,internet_users_pct,IT.NET.USER.ZS,72.79637855
+COL,Colombia,2021,internet_users_pct,IT.NET.USER.ZS,73.02837449
+COL,Colombia,2020,internet_users_pct,IT.NET.USER.ZS,69.79533474
+COL,Colombia,2019,internet_users_pct,IT.NET.USER.ZS,65.0069007159493
+COL,Colombia,2018,internet_users_pct,IT.NET.USER.ZS,64.1263768204459
+COL,Colombia,2017,internet_users_pct,IT.NET.USER.ZS,62.2598803162841
+COL,Colombia,2016,internet_users_pct,IT.NET.USER.ZS,58.1364935728703
+COL,Colombia,2015,internet_users_pct,IT.NET.USER.ZS,55.9049725142924
+CRI,Costa Rica,2025,internet_users_pct,IT.NET.USER.ZS,
+CRI,Costa Rica,2024,internet_users_pct,IT.NET.USER.ZS,87.17019653
+CRI,Costa Rica,2023,internet_users_pct,IT.NET.USER.ZS,85.39514799
+CRI,Costa Rica,2022,internet_users_pct,IT.NET.USER.ZS,82.59801121
+CRI,Costa Rica,2021,internet_users_pct,IT.NET.USER.ZS,82.74901607
+CRI,Costa Rica,2020,internet_users_pct,IT.NET.USER.ZS,80.53018608
+CRI,Costa Rica,2019,internet_users_pct,IT.NET.USER.ZS,81.2025964435269
+CRI,Costa Rica,2018,internet_users_pct,IT.NET.USER.ZS,73.4797284369906
+CRI,Costa Rica,2017,internet_users_pct,IT.NET.USER.ZS,71.5816646195022
+CRI,Costa Rica,2016,internet_users_pct,IT.NET.USER.ZS,65.8804491942718
+CRI,Costa Rica,2015,internet_users_pct,IT.NET.USER.ZS,59.7629501371681
+ECU,Ecuador,2025,internet_users_pct,IT.NET.USER.ZS,
+ECU,Ecuador,2024,internet_users_pct,IT.NET.USER.ZS,77.17273115
+ECU,Ecuador,2023,internet_users_pct,IT.NET.USER.ZS,72.6943146
+ECU,Ecuador,2022,internet_users_pct,IT.NET.USER.ZS,69.71811356
+ECU,Ecuador,2021,internet_users_pct,IT.NET.USER.ZS,69.1147995
+ECU,Ecuador,2020,internet_users_pct,IT.NET.USER.ZS,70.7
+ECU,Ecuador,2019,internet_users_pct,IT.NET.USER.ZS,59.2
+ECU,Ecuador,2018,internet_users_pct,IT.NET.USER.ZS,57.5
+ECU,Ecuador,2017,internet_users_pct,IT.NET.USER.ZS,55.79999924
+ECU,Ecuador,2016,internet_users_pct,IT.NET.USER.ZS,54.0629247288864
+ECU,Ecuador,2015,internet_users_pct,IT.NET.USER.ZS,48.9404337892669
+MEX,Mexico,2025,internet_users_pct,IT.NET.USER.ZS,
+MEX,Mexico,2024,internet_users_pct,IT.NET.USER.ZS,83.12233799
+MEX,Mexico,2023,internet_users_pct,IT.NET.USER.ZS,81.18318755
+MEX,Mexico,2022,internet_users_pct,IT.NET.USER.ZS,78.63217894
+MEX,Mexico,2021,internet_users_pct,IT.NET.USER.ZS,75.62650476
+MEX,Mexico,2020,internet_users_pct,IT.NET.USER.ZS,71.49017499
+MEX,Mexico,2019,internet_users_pct,IT.NET.USER.ZS,69.6321092705209
+MEX,Mexico,2018,internet_users_pct,IT.NET.USER.ZS,56.6595667981289
+MEX,Mexico,2017,internet_users_pct,IT.NET.USER.ZS,53.0317886110982
+MEX,Mexico,2016,internet_users_pct,IT.NET.USER.ZS,59.5404459967255
+MEX,Mexico,2015,internet_users_pct,IT.NET.USER.ZS,57.4310429923633
+PAN,Panama,2025,internet_users_pct,IT.NET.USER.ZS,
+PAN,Panama,2024,internet_users_pct,IT.NET.USER.ZS,72.77149963
+PAN,Panama,2023,internet_users_pct,IT.NET.USER.ZS,68.54851592
+PAN,Panama,2022,internet_users_pct,IT.NET.USER.ZS,67.2838974
+PAN,Panama,2021,internet_users_pct,IT.NET.USER.ZS,66.04270172
+PAN,Panama,2020,internet_users_pct,IT.NET.USER.ZS,64.82430267
+PAN,Panama,2019,internet_users_pct,IT.NET.USER.ZS,63.6284147731451
+PAN,Panama,2018,internet_users_pct,IT.NET.USER.ZS,61.8055313202468
+PAN,Panama,2017,internet_users_pct,IT.NET.USER.ZS,59.9506309038683
+PAN,Panama,2016,internet_users_pct,IT.NET.USER.ZS,54.0
+PAN,Panama,2015,internet_users_pct,IT.NET.USER.ZS,51.2054249948687
+PER,Peru,2025,internet_users_pct,IT.NET.USER.ZS,
+PER,Peru,2024,internet_users_pct,IT.NET.USER.ZS,81.95705992
+PER,Peru,2023,internet_users_pct,IT.NET.USER.ZS,79.48484477
+PER,Peru,2022,internet_users_pct,IT.NET.USER.ZS,74.67495213
+PER,Peru,2021,internet_users_pct,IT.NET.USER.ZS,71.10782643
+PER,Peru,2020,internet_users_pct,IT.NET.USER.ZS,65.25179796
+PER,Peru,2019,internet_users_pct,IT.NET.USER.ZS,59.9505036049006
+PER,Peru,2018,internet_users_pct,IT.NET.USER.ZS,55.0543342443197
+PER,Peru,2017,internet_users_pct,IT.NET.USER.ZS,50.4504121848143
+PER,Peru,2016,internet_users_pct,IT.NET.USER.ZS,45.4617406869459
+PER,Peru,2015,internet_users_pct,IT.NET.USER.ZS,40.8526009090468
+URY,Uruguay,2025,internet_users_pct,IT.NET.USER.ZS,
+URY,Uruguay,2024,internet_users_pct,IT.NET.USER.ZS,91.99109007
+URY,Uruguay,2023,internet_users_pct,IT.NET.USER.ZS,90.92590332
+URY,Uruguay,2022,internet_users_pct,IT.NET.USER.ZS,89.87304314
+URY,Uruguay,2021,internet_users_pct,IT.NET.USER.ZS,87.64440155
+URY,Uruguay,2020,internet_users_pct,IT.NET.USER.ZS,85.47100067
+URY,Uruguay,2019,internet_users_pct,IT.NET.USER.ZS,83.3515337667548
+URY,Uruguay,2018,internet_users_pct,IT.NET.USER.ZS,80.7268428795854
+URY,Uruguay,2017,internet_users_pct,IT.NET.USER.ZS,70.3223543994698
+URY,Uruguay,2016,internet_users_pct,IT.NET.USER.ZS,66.40000153
+URY,Uruguay,2015,internet_users_pct,IT.NET.USER.ZS,64.5707870971624

@@ -1,0 +1,111 @@
+country_code,country,year,indicator,indicator_code,value
+ARG,Argentina,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,14898.0885943842
+ARG,Argentina,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,13969.7836603737
+ARG,Argentina,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,14261.8465667948
+ARG,Argentina,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,13962.1894087223
+ARG,Argentina,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,10738.0179223384
+ARG,Argentina,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,8535.59938004389
+ARG,Argentina,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,9955.97478680428
+ARG,Argentina,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,11752.7998922979
+ARG,Argentina,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,14532.5009308511
+ARG,Argentina,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,12699.9623137756
+ARG,Argentina,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,13679.6264980954
+BRA,Brazil,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,10713.2856869511
+BRA,Brazil,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,10310.5486973693
+BRA,Brazil,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,10377.5892792557
+BRA,Brazil,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,9281.33334441234
+BRA,Brazil,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,7972.5366498646
+BRA,Brazil,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,7074.19378337644
+BRA,Brazil,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,9029.83326681073
+BRA,Brazil,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,9300.66164923219
+BRA,Brazil,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,10080.5092819305
+BRA,Brazil,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,8836.28652735657
+BRA,Brazil,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,8936.19661712113
+CHL,Chile,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,17994.5911957485
+CHL,Chile,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,16658.9652720351
+CHL,Chile,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,17081.5180740049
+CHL,Chile,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,15399.1044717559
+CHL,Chile,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,16216.1840860289
+CHL,Chile,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,13117.9930230086
+CHL,Chile,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,14496.9345640362
+CHL,Chile,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,15659.4808675628
+CHL,Chile,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,14879.9086227187
+CHL,Chile,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,13649.8520452803
+CHL,Chile,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,13433.9202987032
+COL,Colombia,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,8561.62091854449
+COL,Colombia,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,7951.08624019412
+COL,Colombia,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,7012.49169137756
+COL,Colombia,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,6680.44506854481
+COL,Colombia,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,6222.62164397614
+COL,Colombia,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,5339.68711357943
+COL,Colombia,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,6472.54544924705
+COL,Colombia,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,6816.96818309544
+COL,Colombia,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,6479.53231292429
+COL,Colombia,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,5959.84250367574
+COL,Colombia,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,6248.51490534512
+CRI,Costa Rica,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,19970.0989059622
+CRI,Costa Rica,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,18853.2828705886
+CRI,Costa Rica,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,17140.771430122
+CRI,Costa Rica,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,13971.7649991294
+CRI,Costa Rica,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,12962.2716075659
+CRI,Costa Rica,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,12475.6852076814
+CRI,Costa Rica,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,12951.8588421841
+CRI,Costa Rica,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,12620.0207321581
+CRI,Costa Rica,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,12317.0902779911
+CRI,Costa Rica,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,12091.0301560892
+CRI,Costa Rica,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,11714.7106121672
+ECU,Ecuador,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,7125.27618527738
+ECU,Ecuador,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,6826.5294137822
+ECU,Ecuador,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,6718.1447938811
+ECU,Ecuador,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,6515.58528418336
+ECU,Ecuador,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,6061.32350181711
+ECU,Ecuador,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,5463.64515348598
+ECU,Ecuador,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,6205.05765246766
+ECU,Ecuador,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,6303.91886658338
+ECU,Ecuador,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,6233.32244797718
+ECU,Ecuador,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,5917.63771271481
+ECU,Ecuador,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,5976.1596805651
+MEX,Mexico,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,13889.2339628708
+MEX,Mexico,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,13988.0423745241
+MEX,Mexico,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,13830.843848864
+MEX,Mexico,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,11405.7940469896
+MEX,Mexico,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,10314.0506733708
+MEX,Mexico,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,8841.27074929751
+MEX,Mexico,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,10369.5553593527
+MEX,Mexico,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,10084.7937570364
+MEX,Mexico,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,9649.27816729586
+MEX,Mexico,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,9097.92397674769
+MEX,Mexico,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,10021.2386113616
+PAN,Panama,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,19789.7308555826
+PAN,Panama,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,19161.218843129
+PAN,Panama,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,18797.1933894611
+PAN,Panama,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,17378.6070083597
+PAN,Panama,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,15509.8069109784
+PAN,Panama,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,13290.5608347594
+PAN,Panama,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,16477.9066285687
+PAN,Panama,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,16151.3273478476
+PAN,Panama,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,15694.6297454295
+PAN,Panama,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,14832.3611608191
+PAN,Panama,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,14082.6548502728
+PER,Peru,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,9684.41170314988
+PER,Peru,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,8526.29665719783
+PER,Peru,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,7919.04634828547
+PER,Peru,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,7353.74598721667
+PER,Peru,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,6828.53422535638
+PER,Peru,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,6133.32552410183
+PER,Peru,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,7037.00803692604
+PER,Peru,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,6978.49121548627
+PER,Peru,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,6736.16693725487
+PER,Peru,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,6217.03599995447
+PER,Peru,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,6231.71150338894
+URY,Uruguay,2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,25215.8238152781
+URY,Uruguay,2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,24308.4954958447
+URY,Uruguay,2023,gdp_per_capita_usd,NY.GDP.PCAP.CD,23378.6399733516
+URY,Uruguay,2022,gdp_per_capita_usd,NY.GDP.PCAP.CD,21009.2883798725
+URY,Uruguay,2021,gdp_per_capita_usd,NY.GDP.PCAP.CD,17881.8119616753
+URY,Uruguay,2020,gdp_per_capita_usd,NY.GDP.PCAP.CD,15757.5341990356
+URY,Uruguay,2019,gdp_per_capita_usd,NY.GDP.PCAP.CD,18315.7350377437
+URY,Uruguay,2018,gdp_per_capita_usd,NY.GDP.PCAP.CD,19249.9404677501
+URY,Uruguay,2017,gdp_per_capita_usd,NY.GDP.PCAP.CD,19184.6626114272
+URY,Uruguay,2016,gdp_per_capita_usd,NY.GDP.PCAP.CD,17009.7584207276
+URY,Uruguay,2015,gdp_per_capita_usd,NY.GDP.PCAP.CD,17125.9016800298

@@ -1,0 +1,111 @@
+country_code,country,year,indicator,indicator_code,value
+ARG,Argentina,2025,population,SP.POP.TOTL,45851378
+ARG,Argentina,2024,population,SP.POP.TOTL,45696159
+ARG,Argentina,2023,population,SP.POP.TOTL,45538401
+ARG,Argentina,2022,population,SP.POP.TOTL,45407904
+ARG,Argentina,2021,population,SP.POP.TOTL,45312281
+ARG,Argentina,2020,population,SP.POP.TOTL,45191965
+ARG,Argentina,2019,population,SP.POP.TOTL,44973465
+ARG,Argentina,2018,population,SP.POP.TOTL,44654882
+ARG,Argentina,2017,population,SP.POP.TOTL,44288894
+ARG,Argentina,2016,population,SP.POP.TOTL,43900313
+ARG,Argentina,2015,population,SP.POP.TOTL,43477012
+BRA,Brazil,2025,population,SP.POP.TOTL,212812405
+BRA,Brazil,2024,population,SP.POP.TOTL,211998573
+BRA,Brazil,2023,population,SP.POP.TOTL,211140729
+BRA,Brazil,2022,population,SP.POP.TOTL,210306415
+BRA,Brazil,2021,population,SP.POP.TOTL,209550294
+BRA,Brazil,2020,population,SP.POP.TOTL,208660842
+BRA,Brazil,2019,population,SP.POP.TOTL,207455459
+BRA,Brazil,2018,population,SP.POP.TOTL,206107261
+BRA,Brazil,2017,population,SP.POP.TOTL,204703445
+BRA,Brazil,2016,population,SP.POP.TOTL,203218114
+BRA,Brazil,2015,population,SP.POP.TOTL,201675532
+CHL,Chile,2025,population,SP.POP.TOTL,19859921
+CHL,Chile,2024,population,SP.POP.TOTL,19764771
+CHL,Chile,2023,population,SP.POP.TOTL,19658835
+CHL,Chile,2022,population,SP.POP.TOTL,19553036
+CHL,Chile,2021,population,SP.POP.TOTL,19456334
+CHL,Chile,2020,population,SP.POP.TOTL,19370624
+CHL,Chile,2019,population,SP.POP.TOTL,19197744
+CHL,Chile,2018,population,SP.POP.TOTL,18893191
+CHL,Chile,2017,population,SP.POP.TOTL,18558868
+CHL,Chile,2016,population,SP.POP.TOTL,18267221
+CHL,Chile,2015,population,SP.POP.TOTL,18047625
+COL,Colombia,2025,population,SP.POP.TOTL,53425635
+COL,Colombia,2024,population,SP.POP.TOTL,52886363
+COL,Colombia,2023,population,SP.POP.TOTL,52321152
+COL,Colombia,2022,population,SP.POP.TOTL,51737944
+COL,Colombia,2021,population,SP.POP.TOTL,51188173
+COL,Colombia,2020,population,SP.POP.TOTL,50629997
+COL,Colombia,2019,population,SP.POP.TOTL,49907985
+COL,Colombia,2018,population,SP.POP.TOTL,49024465
+COL,Colombia,2017,population,SP.POP.TOTL,48131078
+COL,Colombia,2016,population,SP.POP.TOTL,47437512
+COL,Colombia,2015,population,SP.POP.TOTL,46969940
+CRI,Costa Rica,2025,population,SP.POP.TOTL,5152950
+CRI,Costa Rica,2024,population,SP.POP.TOTL,5129910
+CRI,Costa Rica,2023,population,SP.POP.TOTL,5105525
+CRI,Costa Rica,2022,population,SP.POP.TOTL,5081765
+CRI,Costa Rica,2021,population,SP.POP.TOTL,5059988
+CRI,Costa Rica,2020,population,SP.POP.TOTL,5034320
+CRI,Costa Rica,2019,population,SP.POP.TOTL,4999553
+CRI,Costa Rica,2018,population,SP.POP.TOTL,4957818
+CRI,Costa Rica,2017,population,SP.POP.TOTL,4913177
+CRI,Costa Rica,2016,population,SP.POP.TOTL,4866998
+CRI,Costa Rica,2015,population,SP.POP.TOTL,4818038
+ECU,Ecuador,2025,population,SP.POP.TOTL,18289896
+ECU,Ecuador,2024,population,SP.POP.TOTL,18135478
+ECU,Ecuador,2023,population,SP.POP.TOTL,17980083
+ECU,Ecuador,2022,population,SP.POP.TOTL,17823897
+ECU,Ecuador,2021,population,SP.POP.TOTL,17682454
+ECU,Ecuador,2020,population,SP.POP.TOTL,17546065
+ECU,Ecuador,2019,population,SP.POP.TOTL,17340021
+ECU,Ecuador,2018,population,SP.POP.TOTL,17049547
+ECU,Ecuador,2017,population,SP.POP.TOTL,16759519
+ECU,Ecuador,2016,population,SP.POP.TOTL,16505139
+ECU,Ecuador,2015,population,SP.POP.TOTL,16266225
+MEX,Mexico,2025,population,SP.POP.TOTL,131946900
+MEX,Mexico,2024,population,SP.POP.TOTL,130861007
+MEX,Mexico,2023,population,SP.POP.TOTL,129739759
+MEX,Mexico,2022,population,SP.POP.TOTL,128613117
+MEX,Mexico,2021,population,SP.POP.TOTL,127648148
+MEX,Mexico,2020,population,SP.POP.TOTL,126799054
+MEX,Mexico,2019,population,SP.POP.TOTL,125762982
+MEX,Mexico,2018,population,SP.POP.TOTL,124573711
+MEX,Mexico,2017,population,SP.POP.TOTL,123400057
+MEX,Mexico,2016,population,SP.POP.TOTL,122251351
+MEX,Mexico,2015,population,SP.POP.TOTL,121072306
+PAN,Panama,2025,population,SP.POP.TOTL,4571189
+PAN,Panama,2024,population,SP.POP.TOTL,4515577
+PAN,Panama,2023,population,SP.POP.TOTL,4458759
+PAN,Panama,2022,population,SP.POP.TOTL,4400773
+PAN,Panama,2021,population,SP.POP.TOTL,4345405
+PAN,Panama,2020,population,SP.POP.TOTL,4293261
+PAN,Panama,2019,population,SP.POP.TOTL,4234700
+PAN,Panama,2018,population,SP.POP.TOTL,4167860
+PAN,Panama,2017,population,SP.POP.TOTL,4098707
+PAN,Panama,2016,population,SP.POP.TOTL,4029086
+PAN,Panama,2015,population,SP.POP.TOTL,3960035
+PER,Peru,2025,population,SP.POP.TOTL,34576665
+PER,Peru,2024,population,SP.POP.TOTL,34217848
+PER,Peru,2023,population,SP.POP.TOTL,33845617
+PER,Peru,2022,population,SP.POP.TOTL,33475438
+PER,Peru,2021,population,SP.POP.TOTL,33155882
+PER,Peru,2020,population,SP.POP.TOTL,32838579
+PER,Peru,2019,population,SP.POP.TOTL,32449303
+PER,Peru,2018,population,SP.POP.TOTL,31897584
+PER,Peru,2017,population,SP.POP.TOTL,31324637
+PER,Peru,2016,population,SP.POP.TOTL,30866494
+PER,Peru,2015,population,SP.POP.TOTL,30457600
+URY,Uruguay,2025,population,SP.POP.TOTL,3384688
+URY,Uruguay,2024,population,SP.POP.TOTL,3386588
+URY,Uruguay,2023,population,SP.POP.TOTL,3388081
+URY,Uruguay,2022,population,SP.POP.TOTL,3390913
+URY,Uruguay,2021,population,SP.POP.TOTL,3396695
+URY,Uruguay,2020,population,SP.POP.TOTL,3398968
+URY,Uruguay,2019,population,SP.POP.TOTL,3397206
+URY,Uruguay,2018,population,SP.POP.TOTL,3394534
+URY,Uruguay,2017,population,SP.POP.TOTL,3388438
+URY,Uruguay,2016,population,SP.POP.TOTL,3379283
+URY,Uruguay,2015,population,SP.POP.TOTL,3368017
