@@ -196,7 +196,6 @@ The release is fixed to 2024–2025. A later reference year requires an explicit
 - [Source manifest](data/raw/source_manifest.json)
 - [Review notebook](notebooks/executive_analysis.ipynb)
 - [Spanish LinkedIn image](reports/figures/linkedin_2025_es.png)
-- [Spanish LinkedIn text and publishing steps](docs/linkedin_post_es.md)
 - [Historical eight-indicator model](reports/historical_2024.md)
 
 ## Limits
