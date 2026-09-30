@@ -1,0 +1,17 @@
+year,indicator,indicator_code,available,expected,missing_country_codes,included_in_core5
+2024,gdp_usd,NY.GDP.MKTP.CD,10,10,,True
+2024,gdp_growth_pct,NY.GDP.MKTP.KD.ZG,10,10,,True
+2024,gdp_per_capita_usd,NY.GDP.PCAP.CD,10,10,,True
+2024,population,SP.POP.TOTL,10,10,,True
+2024,internet_users_pct,IT.NET.USER.ZS,10,10,,False
+2024,trade_pct_gdp,NE.TRD.GNFS.ZS,10,10,,False
+2024,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,10,10,,True
+2024,inflation_pct,FP.CPI.TOTL.ZG,10,10,,False
+2025,gdp_usd,NY.GDP.MKTP.CD,10,10,,True
+2025,gdp_growth_pct,NY.GDP.MKTP.KD.ZG,10,10,,True
+2025,gdp_per_capita_usd,NY.GDP.PCAP.CD,10,10,,True
+2025,population,SP.POP.TOTL,10,10,,True
+2025,internet_users_pct,IT.NET.USER.ZS,0,10,ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY,False
+2025,trade_pct_gdp,NE.TRD.GNFS.ZS,9,10,PAN,False
+2025,fdi_net_inflows_pct_gdp,BX.KLT.DINV.WD.GD.ZS,10,10,,True
+2025,inflation_pct,FP.CPI.TOTL.ZG,9,10,ARG,False

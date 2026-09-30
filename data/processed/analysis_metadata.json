@@ -1,6 +1,14 @@
 {
-  "reference_year": 2024,
-  "data_retrieved_on": "2026-09-21",
+  "model_id": "core5-pooled-2024-2025-v1",
+  "reference_year": 2025,
+  "comparison_year": 2024,
+  "analysis_updated_on": "2026-09-30",
+  "source_retrieval_dates": [
+    "2026-09-21"
+  ],
+  "source_api_last_updated": [
+    "2026-07-13"
+  ],
   "countries": {
     "ARG": "Argentina",
     "BRA": "Brazil",
@@ -13,25 +21,56 @@
     "PER": "Peru",
     "URY": "Uruguay"
   },
-  "indicators": {
+  "core_indicators": {
     "gdp_usd": "NY.GDP.MKTP.CD",
     "gdp_growth_pct": "NY.GDP.MKTP.KD.ZG",
     "gdp_per_capita_usd": "NY.GDP.PCAP.CD",
     "population": "SP.POP.TOTL",
-    "internet_users_pct": "IT.NET.USER.ZS",
-    "trade_pct_gdp": "NE.TRD.GNFS.ZS",
-    "fdi_net_inflows_pct_gdp": "BX.KLT.DINV.WD.GD.ZS",
-    "inflation_pct": "FP.CPI.TOTL.ZG"
+    "fdi_net_inflows_pct_gdp": "BX.KLT.DINV.WD.GD.ZS"
   },
-  "weights": {
-    "gdp_usd": 0.2,
-    "gdp_growth_pct": 0.15,
-    "gdp_per_capita_usd": 0.1,
-    "population": 0.1,
-    "internet_users_pct": 0.15,
-    "trade_pct_gdp": 0.15,
-    "fdi_net_inflows_pct_gdp": 0.1,
-    "inflation_pct": 0.05
+  "core_weights": {
+    "gdp_usd": 0.3076923076923077,
+    "gdp_growth_pct": 0.23076923076923075,
+    "gdp_per_capita_usd": 0.15384615384615385,
+    "population": 0.15384615384615385,
+    "fdi_net_inflows_pct_gdp": 0.15384615384615385
   },
-  "method": "5th/95th percentile winsorization, min-max normalization, weighted sum"
+  "excluded_from_current_score": [
+    "internet_users_pct",
+    "trade_pct_gdp",
+    "inflation_pct"
+  ],
+  "scaling": "Pooled 5th/95th percentiles across 10 countries x 2 years; identical bounds and weights for 2024 and 2025.",
+  "imputation": "None. No forward fill, synthetic observations, or project forecasts.",
+  "sensitivity": {
+    "draws": 2000,
+    "seed": 42,
+    "dirichlet_concentration": 100,
+    "interpretation": "Scenario share conditional on weights and model; not business-success probability."
+  },
+  "legacy_model": {
+    "reference_year": 2024,
+    "indicators": {
+      "gdp_usd": "NY.GDP.MKTP.CD",
+      "gdp_growth_pct": "NY.GDP.MKTP.KD.ZG",
+      "gdp_per_capita_usd": "NY.GDP.PCAP.CD",
+      "population": "SP.POP.TOTL",
+      "internet_users_pct": "IT.NET.USER.ZS",
+      "trade_pct_gdp": "NE.TRD.GNFS.ZS",
+      "fdi_net_inflows_pct_gdp": "BX.KLT.DINV.WD.GD.ZS",
+      "inflation_pct": "FP.CPI.TOTL.ZG"
+    },
+    "weights": {
+      "gdp_usd": 0.2,
+      "gdp_growth_pct": 0.15,
+      "gdp_per_capita_usd": 0.1,
+      "population": 0.1,
+      "internet_users_pct": 0.15,
+      "trade_pct_gdp": 0.15,
+      "fdi_net_inflows_pct_gdp": 0.1,
+      "inflation_pct": 0.05
+    },
+    "ranking_file": "market_opportunity_ranking.csv",
+    "note": "Eight-indicator historical model; scores and ranks are not directly comparable to core5."
+  }
 }

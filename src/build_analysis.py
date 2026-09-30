@@ -1,194 +1,183 @@
-"""Download World Bank data and build the LATAM opportunity ranking."""
+"""Reproduce the core-five 2025 screening and its comparable 2024 baseline.
+
+Run offline from committed extracts by default; --refresh downloads official WDI data.
+"""
 from __future__ import annotations
-
+import argparse
+from datetime import datetime, timezone
+from hashlib import sha256
 import json
-import time
 from pathlib import Path
-from urllib.parse import urlencode
-from urllib.request import urlopen
-
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
+from download_data import COUNTRIES, INDICATORS
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW = ROOT / "data" / "raw"
-PROCESSED = ROOT / "data" / "processed"
-FIGURES = ROOT / "reports" / "figures"
-
-COUNTRIES = {
-    "ARG": "Argentina", "BRA": "Brazil", "CHL": "Chile", "COL": "Colombia",
-    "CRI": "Costa Rica", "ECU": "Ecuador", "MEX": "Mexico", "PAN": "Panama",
-    "PER": "Peru", "URY": "Uruguay",
-}
-
-INDICATORS = {
-    "gdp_usd": "NY.GDP.MKTP.CD",
-    "gdp_growth_pct": "NY.GDP.MKTP.KD.ZG",
-    "gdp_per_capita_usd": "NY.GDP.PCAP.CD",
-    "population": "SP.POP.TOTL",
-    "internet_users_pct": "IT.NET.USER.ZS",
-    "trade_pct_gdp": "NE.TRD.GNFS.ZS",
-    "fdi_net_inflows_pct_gdp": "BX.KLT.DINV.WD.GD.ZS",
-    "inflation_pct": "FP.CPI.TOTL.ZG",
-}
-
+RAW, PROCESSED, FIGURES = ROOT / "data/raw", ROOT / "data/processed", ROOT / "reports/figures"
+BASE_YEAR, CURRENT_YEAR = 2024, 2025
+MODEL_ID = "core5-pooled-2024-2025-v1"
 WEIGHTS = {
-    "gdp_usd": 0.20,
-    "gdp_growth_pct": 0.15,
-    "gdp_per_capita_usd": 0.10,
-    "population": 0.10,
-    "internet_users_pct": 0.15,
-    "trade_pct_gdp": 0.15,
-    "fdi_net_inflows_pct_gdp": 0.10,
-    "inflation_pct": 0.05,
+    "gdp_usd": .20, "gdp_growth_pct": .15, "gdp_per_capita_usd": .10,
+    "population": .10, "internet_users_pct": .15, "trade_pct_gdp": .15,
+    "fdi_net_inflows_pct_gdp": .10, "inflation_pct": .05,
 }
+CORE_KEYS = ("gdp_usd", "gdp_growth_pct", "gdp_per_capita_usd", "population", "fdi_net_inflows_pct_gdp")
+CORE_WEIGHTS = {k: WEIGHTS[k] / sum(WEIGHTS[v] for v in CORE_KEYS) for k in CORE_KEYS}
 
 
-def fetch_indicator(code: str, slug: str) -> pd.DataFrame:
-    cache = RAW / f"{slug}.csv"
-    if cache.exists():
-        return pd.read_csv(cache)
-    params = urlencode({"format": "json", "per_page": 2000, "date": "2015:2025"})
-    url = f"https://api.worldbank.org/v2/country/{';'.join(COUNTRIES)}/indicator/{code}?{params}"
-    last_error = None
-    for attempt in range(4):
-        try:
-            with urlopen(url, timeout=90) as response:
-                payload = json.load(response)
-            break
-        except (TimeoutError, OSError) as exc:
-            last_error = exc
-            time.sleep(2 ** attempt)
-    else:
-        raise RuntimeError(f"World Bank API failed for {code}") from last_error
-    rows = payload[1] or []
-    data = pd.DataFrame({
-        "country_code": r["countryiso3code"],
-        "country": COUNTRIES[r["countryiso3code"]],
-        "year": int(r["date"]),
-        "indicator": slug,
-        "indicator_code": code,
-        "value": r["value"],
-    } for r in rows if r["countryiso3code"] in COUNTRIES)
-    data.to_csv(cache, index=False)
-    return data
+def validate_history(history: pd.DataFrame) -> None:
+    keys = ["country_code", "indicator", "year"]
+    if history.duplicated(keys).any():
+        raise ValueError("Duplicate country/indicator/year observations.")
+    expected = pd.MultiIndex.from_product([list(COUNTRIES), list(INDICATORS), range(2015, 2026)], names=keys)
+    actual = pd.MultiIndex.from_frame(history[keys])
+    if len(expected.difference(actual)) or len(actual.difference(expected)):
+        raise ValueError("Expected every source key, including explicit null observations.")
+    for row in history[["country_code", "country", "indicator", "indicator_code"]].drop_duplicates().itertuples():
+        if COUNTRIES[row.country_code] != row.country or INDICATORS[row.indicator] != row.indicator_code:
+            raise ValueError("Source identifiers do not match the documented dictionary.")
+    if not np.isfinite(history.value.dropna().to_numpy()).all():
+        raise ValueError("Non-finite source values.")
 
 
-def winsorized_minmax(series: pd.Series, inverse: bool = False) -> pd.Series:
-    lo, hi = series.quantile([0.05, 0.95])
-    clipped = series.clip(lo, hi)
-    span = clipped.max() - clipped.min()
-    score = pd.Series(50.0, index=series.index) if span == 0 else 100 * (clipped - clipped.min()) / span
+def load_sources() -> tuple[pd.DataFrame, dict]:
+    manifest = json.loads((RAW / "source_manifest.json").read_text(encoding="utf-8"))
+    for key in INDICATORS:
+        if sha256((RAW / f"{key}.csv").read_bytes()).hexdigest() != manifest["sources"][key]["csv_sha256"]:
+            raise ValueError(f"Source checksum mismatch: {key}")
+    history = pd.concat([pd.read_csv(RAW / f"{key}.csv") for key in INDICATORS], ignore_index=True)
+    validate_history(history)
+    return history, manifest
+
+
+def scale(series: pd.Series, lo: float, hi: float, inverse: bool = False) -> pd.Series:
+    if series.isna().any():
+        raise ValueError("Missing observations cannot be scored.")
+    score = pd.Series(50.0, index=series.index) if hi == lo else 100 * (series.clip(lo, hi) - lo) / (hi - lo)
     return 100 - score if inverse else score
 
 
-def main() -> None:
-    for folder in (RAW, PROCESSED, FIGURES):
-        folder.mkdir(parents=True, exist_ok=True)
+def sensitivity(frame: pd.DataFrame, weights: dict, score_column: str) -> pd.DataFrame:
+    rng = np.random.default_rng(42)
+    draws = rng.dirichlet(np.array(list(weights.values())) * 100, size=2000)
+    simulated = frame[[f"score_{key}" for key in weights]].to_numpy() @ draws.T
+    return pd.DataFrame({
+        "country_code": frame.country_code.to_numpy(), "country": frame.country.to_numpy(),
+        "base_rank": frame["rank"].to_numpy(), "base_score": frame[score_column].to_numpy(),
+        "mean_score": simulated.mean(axis=1),
+        "score_p10": np.quantile(simulated, .10, axis=1),
+        "score_p90": np.quantile(simulated, .90, axis=1),
+        "top3_share": (simulated.argsort(axis=0).argsort(axis=0) >= len(frame) - 3).mean(axis=1),
+    }).sort_values("base_rank")
 
-    history = pd.concat([fetch_indicator(code, slug) for slug, code in INDICATORS.items()])
-    history.to_csv(PROCESSED / "indicator_history_2015_2025.csv", index=False)
 
-    # Latest year with complete coverage across every country and indicator.
-    coverage = (history.dropna(subset=["value"])
-                .groupby("year").agg(countries=("country_code", "nunique"), indicators=("indicator", "nunique"), rows=("value", "size")))
-    complete = coverage[(coverage.countries == len(COUNTRIES)) &
-                        (coverage.indicators == len(INDICATORS)) &
-                        (coverage.rows == len(COUNTRIES) * len(INDICATORS))]
-    if complete.empty:
-        raise RuntimeError("No common complete year across all countries and indicators.")
-    reference_year = int(complete.index.max())
+def coverage_table(history: pd.DataFrame) -> pd.DataFrame:
+    rows = []
+    for year in (BASE_YEAR, CURRENT_YEAR):
+        for key in INDICATORS:
+            part = history.loc[history.year.eq(year) & history.indicator.eq(key)]
+            rows.append({
+                "year": year, "indicator": key, "indicator_code": INDICATORS[key],
+                "available": int(part.value.notna().sum()), "expected": len(COUNTRIES),
+                "missing_country_codes": ";".join(part.loc[part.value.isna(), "country_code"].sort_values()),
+                "included_in_core5": key in CORE_KEYS,
+            })
+    return pd.DataFrame(rows)
 
-    snapshot = (history[history.year == reference_year]
-                .pivot(index=["country_code", "country"], columns="indicator", values="value")
-                .reset_index())
-    for indicator in INDICATORS:
-        snapshot[f"score_{indicator}"] = winsorized_minmax(
-            snapshot[indicator], inverse=(indicator == "inflation_pct")
-        )
 
-    snapshot["market_attractiveness"] = (
-        0.20 * snapshot.score_gdp_usd +
-        0.15 * snapshot.score_gdp_growth_pct +
-        0.10 * snapshot.score_gdp_per_capita_usd +
-        0.10 * snapshot.score_population
-    ) / 0.55
-    snapshot["commercial_accessibility"] = (
-        0.15 * snapshot.score_internet_users_pct +
-        0.15 * snapshot.score_trade_pct_gdp +
-        0.10 * snapshot.score_fdi_net_inflows_pct_gdp +
-        0.05 * snapshot.score_inflation_pct
-    ) / 0.45
-    snapshot["opportunity_score"] = sum(
-        WEIGHTS[k] * snapshot[f"score_{k}"] for k in WEIGHTS
-    )
+def build_current(history: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, dict]:
+    chosen = history.loc[history.year.isin([BASE_YEAR, CURRENT_YEAR]) & history.indicator.isin(CORE_KEYS)]
+    panel = chosen.pivot(index=["year", "country_code", "country"], columns="indicator", values="value").reset_index()
+    if len(panel) != 20 or panel[list(CORE_KEYS)].isna().any().any():
+        raise ValueError("The core model requires all 100 observations across the two years.")
+    parameters = {}
+    for key in CORE_KEYS:
+        # Identical ruler for both years, fitted on the pooled twenty observations.
+        lo, hi = panel[key].quantile([.05, .95])
+        parameters[key] = {"p05": float(lo), "p95": float(hi), "weight": CORE_WEIGHTS[key]}
+        panel[f"score_{key}"] = scale(panel[key], lo, hi)
+    panel["screening_score"] = sum(CORE_WEIGHTS[k] * panel[f"score_{k}"] for k in CORE_KEYS)
+    panel["rank"] = panel.groupby("year")["screening_score"].rank(ascending=False, method="min").astype(int)
+    panel = panel.sort_values(["year", "rank", "country_code"])
+    current = panel.loc[panel.year.eq(CURRENT_YEAR)].copy()
+    base = panel.loc[panel.year.eq(BASE_YEAR), ["country_code", "rank", "screening_score"]]
+    comparison = base.merge(current[["country_code", "country", "rank", "screening_score"]],
+                            on="country_code", validate="one_to_one", suffixes=("_2024", "_2025"))
+    comparison["score_change_points"] = comparison.screening_score_2025 - comparison.screening_score_2024
+    comparison["rank_change"] = comparison["rank_2024"] - comparison["rank_2025"]
+    return panel, current, comparison.sort_values("rank_2025"), parameters
+
+
+def build_legacy(history: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    snapshot = history.loc[history.year.eq(BASE_YEAR)].pivot(
+        index=["country_code", "country"], columns="indicator", values="value").reset_index()
+    if snapshot[list(INDICATORS)].isna().any().any():
+        raise ValueError("The eight-indicator historical model needs complete 2024 observations.")
+    for key in INDICATORS:
+        lo, hi = snapshot[key].quantile([.05, .95])
+        snapshot[f"score_{key}"] = scale(snapshot[key], lo, hi, inverse=(key == "inflation_pct"))
+    snapshot["market_attractiveness"] = sum(WEIGHTS[k] * snapshot[f"score_{k}"] for k in CORE_KEYS[:4]) / .55
+    access = ("internet_users_pct", "trade_pct_gdp", "fdi_net_inflows_pct_gdp", "inflation_pct")
+    snapshot["commercial_accessibility"] = sum(WEIGHTS[k] * snapshot[f"score_{k}"] for k in access) / .45
+    snapshot["opportunity_score"] = sum(WEIGHTS[k] * snapshot[f"score_{k}"] for k in WEIGHTS)
     snapshot["rank"] = snapshot.opportunity_score.rank(ascending=False, method="min").astype(int)
     snapshot = snapshot.sort_values("rank")
-    snapshot["segment"] = pd.cut(
-        snapshot["rank"], bins=[0, 3, 5, 8, 10],
-        labels=["Priority Market", "Growth Bet", "Selective Opportunity", "Monitor"]
-    ).astype(str)
-    snapshot.to_csv(PROCESSED / "market_opportunity_ranking.csv", index=False)
+    snapshot["segment"] = pd.cut(snapshot["rank"], [0, 3, 5, 8, 10],
+        labels=["Priority Market", "Growth Bet", "Selective Opportunity", "Monitor"]).astype(str)
+    old_sensitivity = sensitivity(snapshot, WEIGHTS, "opportunity_score").rename(columns={"top3_share": "top3_probability"})
+    return snapshot, old_sensitivity
 
-    # Weight sensitivity: 2,000 Dirichlet draws centered around the documented weights.
-    rng = np.random.default_rng(42)
-    keys = list(WEIGHTS)
-    draws = rng.dirichlet(np.array(list(WEIGHTS.values())) * 100, size=2000)
-    matrix = snapshot[[f"score_{k}" for k in keys]].to_numpy()
-    simulated = matrix @ draws.T
-    sensitivity = pd.DataFrame({
-        "country": snapshot.country,
-        "base_rank": snapshot["rank"],
-        "mean_score": simulated.mean(axis=1),
-        "score_p10": np.quantile(simulated, 0.10, axis=1),
-        "score_p90": np.quantile(simulated, 0.90, axis=1),
-        "top3_probability": (simulated.argsort(axis=0).argsort(axis=0) >= len(snapshot) - 3).mean(axis=1),
-    }).sort_values("base_rank")
-    sensitivity.to_csv(PROCESSED / "weight_sensitivity.csv", index=False)
 
-    sns.set_theme(style="whitegrid")
-    fig, ax = plt.subplots(figsize=(10, 6))
-    plot = snapshot.sort_values("opportunity_score")
-    sns.barplot(data=plot, x="opportunity_score", y="country", hue="segment", dodge=False, ax=ax)
-    ax.set(title=f"LATAM Market Opportunity Ranking ({reference_year})", xlabel="Opportunity score (0–100)", ylabel="")
-    ax.legend(title="Segment", loc="lower right")
-    fig.tight_layout()
-    fig.savefig(FIGURES / "market_opportunity_ranking.png", dpi=180)
-    plt.close(fig)
-
-    fig, ax = plt.subplots(figsize=(9, 7))
-    palette = {"Priority Market": "#2463A7", "Growth Bet": "#E07A3F",
-               "Selective Opportunity": "#3A9D5D", "Monitor": "#C64040"}
-    size = 80 + 820 * snapshot.gdp_usd / snapshot.gdp_usd.max()
-    for segment, group in snapshot.groupby("segment", sort=False):
-        ax.scatter(group.commercial_accessibility, group.market_attractiveness,
-                   s=size.loc[group.index], color=palette[segment], alpha=0.88,
-                   edgecolor="white", linewidth=0.8, label=segment)
-    for row in snapshot.itertuples():
-        ax.annotate(row.country, (row.commercial_accessibility, row.market_attractiveness),
-                    xytext=(5, 4), textcoords="offset points", fontsize=8)
-    ax.axvline(snapshot.commercial_accessibility.median(), color="grey", linestyle="--", linewidth=1)
-    ax.axhline(snapshot.market_attractiveness.median(), color="grey", linestyle="--", linewidth=1)
-    ax.set(title=f"Market Attractiveness × Commercial Accessibility ({reference_year})",
-           xlabel="Commercial accessibility (0–100)", ylabel="Market attractiveness (0–100)")
-    ax.legend(title="Segment", loc="lower right", frameon=True)
-    fig.tight_layout()
-    fig.savefig(FIGURES / "attractiveness_accessibility_matrix.png", dpi=180)
-    plt.close(fig)
-
-    metadata = {
-        "reference_year": reference_year,
-        "data_retrieved_on": str(pd.Timestamp.today().date()),
-        "countries": COUNTRIES,
-        "indicators": INDICATORS,
-        "weights": WEIGHTS,
-        "method": "5th/95th percentile winsorization, min-max normalization, weighted sum",
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--refresh", action="store_true", help="Download official WDI sources first.")
+    args = parser.parse_args()
+    if args.refresh:
+        from download_data import main as refresh
+        refresh()
+    for folder in (PROCESSED, FIGURES):
+        folder.mkdir(parents=True, exist_ok=True)
+    history, manifest = load_sources()
+    panel, current, comparison, parameters = build_current(history)
+    coverage = coverage_table(history)
+    current_sensitivity = sensitivity(current, CORE_WEIGHTS, "screening_score")
+    legacy, legacy_sensitivity = build_legacy(history)
+    outputs = {
+        "indicator_history_2015_2025.csv": history,
+        "data_coverage_2024_2025.csv": coverage,
+        "market_screening_panel_2024_2025.csv": panel,
+        "market_screening_2025.csv": current,
+        "market_screening_comparison_2024_2025.csv": comparison,
+        "weight_sensitivity_2025.csv": current_sensitivity,
+        "market_opportunity_ranking.csv": legacy,
+        "weight_sensitivity.csv": legacy_sensitivity,
     }
-    (PROCESSED / "analysis_metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
-    print(snapshot[["rank", "country", "opportunity_score", "segment"]].to_string(index=False))
-    print(f"\nReference year: {reference_year}")
+    for name, frame in outputs.items():
+        frame.to_csv(PROCESSED / name, index=False)
+    (PROCESSED / "scaling_parameters_2024_2025.json").write_text(json.dumps(parameters, indent=2) + "\n", encoding="utf-8")
+    dates = sorted({s.get("retrieved_on") or s["retrieved_at_utc"][:10] for s in manifest["sources"].values()})
+    metadata = {
+        "model_id": MODEL_ID, "reference_year": CURRENT_YEAR, "comparison_year": BASE_YEAR,
+        "analysis_updated_on": str(datetime.now(timezone.utc).date()),
+        "source_retrieval_dates": dates,
+        "source_api_last_updated": sorted({s["api_last_updated"] for s in manifest["sources"].values()}),
+        "countries": COUNTRIES, "core_indicators": {k: INDICATORS[k] for k in CORE_KEYS},
+        "core_weights": CORE_WEIGHTS,
+        "excluded_from_current_score": [k for k in INDICATORS if k not in CORE_KEYS],
+        "scaling": "Pooled 5th/95th percentiles across 10 countries x 2 years; identical bounds and weights for 2024 and 2025.",
+        "imputation": "None. No forward fill, synthetic observations, or project forecasts.",
+        "sensitivity": {"draws": 2000, "seed": 42, "dirichlet_concentration": 100,
+            "interpretation": "Scenario share conditional on weights and model; not business-success probability."},
+        "legacy_model": {"reference_year": BASE_YEAR, "indicators": INDICATORS, "weights": WEIGHTS,
+            "ranking_file": "market_opportunity_ranking.csv",
+            "note": "Eight-indicator historical model; scores and ranks are not directly comparable to core5."},
+    }
+    (PROCESSED / "analysis_metadata.json").write_text(json.dumps(metadata, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    from render_reports import render_all
+    render_all(current, comparison, current_sensitivity, legacy, metadata, coverage)
+    print(current[["rank", "country", "screening_score"]].to_string(index=False))
+    print("\nLike-for-like comparison:\n", comparison.to_string(index=False))
+    print("\nSource retrieval dates:", ", ".join(dates))
 
 
 if __name__ == "__main__":

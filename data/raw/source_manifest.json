@@ -1,0 +1,99 @@
+{
+  "provider": "World Bank — World Development Indicators",
+  "observation_window": "2015:2025",
+  "source_snapshot_commit": "7c0e0492a42ed9507a7e4e4a007faf6c0087fd29",
+  "sources": {
+    "gdp_usd": {
+      "indicator_code": "NY.GDP.MKTP.CD",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY/indicator/NY.GDP.MKTP.CD?format=json&per_page=2000&date=2015%3A2025",
+      "retrieved_on": "2026-09-21",
+      "retrieval_date_evidence": "Original committed analysis_metadata.json and README.md",
+      "api_last_updated": "2026-07-13",
+      "api_update_evidence": "Original README.md, consistent with the WDI release listing checked 2026-09-30",
+      "rows": 110,
+      "non_null_2025": 10,
+      "csv_sha256": "3ef86b077297c084aa26d75794459e139ccfe6574e891bf50c10e7d4e5a41e3e"
+    },
+    "gdp_growth_pct": {
+      "indicator_code": "NY.GDP.MKTP.KD.ZG",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=2000&date=2015%3A2025",
+      "retrieved_on": "2026-09-21",
+      "retrieval_date_evidence": "Original committed analysis_metadata.json and README.md",
+      "api_last_updated": "2026-07-13",
+      "api_update_evidence": "Original README.md, consistent with the WDI release listing checked 2026-09-30",
+      "rows": 110,
+      "non_null_2025": 10,
+      "csv_sha256": "9952e16a731cba3daa00fce3bcc963b264b6379c9250af86da1398b9f76951a2"
+    },
+    "gdp_per_capita_usd": {
+      "indicator_code": "NY.GDP.PCAP.CD",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY/indicator/NY.GDP.PCAP.CD?format=json&per_page=2000&date=2015%3A2025",
+      "retrieved_on": "2026-09-21",
+      "retrieval_date_evidence": "Original committed analysis_metadata.json and README.md",
+      "api_last_updated": "2026-07-13",
+      "api_update_evidence": "Original README.md, consistent with the WDI release listing checked 2026-09-30",
+      "rows": 110,
+      "non_null_2025": 10,
+      "csv_sha256": "95f951f94856f5894d09916bf4160e389f82f2de54f9b5683f2ec05c5f7d39e9"
+    },
+    "population": {
+      "indicator_code": "SP.POP.TOTL",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY/indicator/SP.POP.TOTL?format=json&per_page=2000&date=2015%3A2025",
+      "retrieved_on": "2026-09-21",
+      "retrieval_date_evidence": "Original committed analysis_metadata.json and README.md",
+      "api_last_updated": "2026-07-13",
+      "api_update_evidence": "Original README.md, consistent with the WDI release listing checked 2026-09-30",
+      "rows": 110,
+      "non_null_2025": 10,
+      "csv_sha256": "e1bba69d1a6ce41ad56b70bbccf0bfe11623f55fed929f3bf48b4b21479ae1f9"
+    },
+    "internet_users_pct": {
+      "indicator_code": "IT.NET.USER.ZS",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY/indicator/IT.NET.USER.ZS?format=json&per_page=2000&date=2015%3A2025",
+      "retrieved_on": "2026-09-21",
+      "retrieval_date_evidence": "Original committed analysis_metadata.json and README.md",
+      "api_last_updated": "2026-07-13",
+      "api_update_evidence": "Original README.md, consistent with the WDI release listing checked 2026-09-30",
+      "rows": 110,
+      "non_null_2025": 0,
+      "csv_sha256": "a8d13d81e5f35b65d1927d82e492ce626dd503adc38be9fd52ca73bb1a1cb940"
+    },
+    "trade_pct_gdp": {
+      "indicator_code": "NE.TRD.GNFS.ZS",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY/indicator/NE.TRD.GNFS.ZS?format=json&per_page=2000&date=2015%3A2025",
+      "retrieved_on": "2026-09-21",
+      "retrieval_date_evidence": "Original committed analysis_metadata.json and README.md",
+      "api_last_updated": "2026-07-13",
+      "api_update_evidence": "Original README.md, consistent with the WDI release listing checked 2026-09-30",
+      "rows": 110,
+      "non_null_2025": 9,
+      "csv_sha256": "63f305bd89d15e65ac7270c01f9bd66e9ee61c14898a756b7c546d88b8f77868"
+    },
+    "fdi_net_inflows_pct_gdp": {
+      "indicator_code": "BX.KLT.DINV.WD.GD.ZS",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY/indicator/BX.KLT.DINV.WD.GD.ZS?format=json&per_page=2000&date=2015%3A2025",
+      "retrieved_on": "2026-09-21",
+      "retrieval_date_evidence": "Original committed analysis_metadata.json and README.md",
+      "api_last_updated": "2026-07-13",
+      "api_update_evidence": "Original README.md, consistent with the WDI release listing checked 2026-09-30",
+      "rows": 110,
+      "non_null_2025": 10,
+      "csv_sha256": "4591238366bee7a8f599c19251f3dd554f6b11fb9d957cb02d68093d28e620f2"
+    },
+    "inflation_pct": {
+      "indicator_code": "FP.CPI.TOTL.ZG",
+      "url": "https://api.worldbank.org/v2/country/ARG;BRA;CHL;COL;CRI;ECU;MEX;PAN;PER;URY/indicator/FP.CPI.TOTL.ZG?format=json&per_page=2000&date=2015%3A2025",
+      "retrieved_on": "2026-09-21",
+      "retrieval_date_evidence": "Original committed analysis_metadata.json and README.md",
+      "api_last_updated": "2026-07-13",
+      "api_update_evidence": "Original README.md, consistent with the WDI release listing checked 2026-09-30",
+      "rows": 110,
+      "non_null_2025": 9,
+      "csv_sha256": "e5bc96720c36e778588782c9d3e1c13de827f24cbd2054eb7d650b712a2977da"
+    }
+  },
+  "release_listing_checked_on": "2026-09-30",
+  "release_listing_url": "https://databank.worldbank.org/",
+  "refresh_status": "Full API batch timed out on 2026-09-30. Original versioned extracts retained; no new acquisition date claimed.",
+  "note": "Official source observations may include estimates and revisions. No project-generated forecasts or gap filling."
+}
